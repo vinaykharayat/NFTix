@@ -51,7 +51,7 @@ function Wallet({address}) {
   }
   useEffect(()=>{
     if(!address) return;
-    axios.get(`https://testnets-api.opensea.io/api/v1/assets?owner=${address}&asset_contract_address=${process.env.GATSBY_REACT_APP_CONTRACT_ID}`)
+    axios.get(`https://testnets-api.opensea.io/api/v1/assets?owner=${address}&asset_contract_address=0xD28B43977A499EB73C8293f3Da491EC7A8eB52c6`)
     .then((res) => {
       setLoadingTicket(true);
       console.log(res)
