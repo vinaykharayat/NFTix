@@ -84,7 +84,7 @@ function App() {
 
     const signer = provider.getSigner();
     const connectedContract = new ethers.Contract(
-      process.env.REACT_APP_CONTRACT_ID,
+      process.env.GATSBY_REACT_APP_CONTRACT_ID,
       nfTixBooth,
       signer
     );
