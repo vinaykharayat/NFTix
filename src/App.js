@@ -51,6 +51,7 @@ function App() {
 
   const [connectedContract, setConnectedContract] = useState(null);
   console.log("connected contract:", connectedContract);
+  console.log("env", process.env.REACT_APP_CONTRACT_ID);
 
   useEffect(()=>{
     const checkIsContractOwner = async() =>{
@@ -84,7 +85,7 @@ function App() {
 
     const signer = provider.getSigner();
     const connectedContract = new ethers.Contract(
-      "0xD28B43977A499EB73C8293f3Da491EC7A8eB52c6",
+      process.env.REACT_APP_CONTRACT_ID,
       nfTixBooth,
       signer
     );
